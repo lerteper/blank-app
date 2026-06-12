@@ -9,11 +9,10 @@ if (selection == None):
 
     'Please select a ticker.'
 
-chosen_ticker = yf.Tickers(selection)
 
 
 else:
-
+    chosen_ticker = yf.Tickers(selection)
     dict = {
     "1 day" : ["1d", "1m"],
     "1 week": ["7d", "5m"], 
