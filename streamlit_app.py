@@ -5,12 +5,12 @@ import yfinance as yf
 st.title("Simple Stocks App")
 selection = st.multiselect("Stock", ["AAPL", "MSFT", "GOOG", "AMZN", "TSLA"])
 slider = st.select_slider("Time Frame", ["1 week", "2 weeks", "1 month", "3 months", "1 year", "5 years", "10 years"])
+if (selection == None):
+
+    'Please select a ticker.'
 
 chosen_ticker = yf.Tickers(selection)
 
-if (chosen_ticker == None):
-
-    'Please select a ticker.'
 
 else:
 
